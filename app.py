@@ -96,7 +96,7 @@ def predict(img, model):
     plt.imsave('image.jpg', img)
 
 
-# @st.experimental_singleton
+@st.experimental_singleton
 def load_model(model_path):
   model = unet.unet(224,224,1,3)
   model.load_weights(model_path)    
@@ -133,7 +133,7 @@ def pipeline(model, image, video, color):
 
         clip = ImageSequenceClip(list(results_frames), fps=25)
         clip.write_gif('test.gif', fps=25)     
-        st.info('Video is ready! (wait to download it)')
+        st.info('It is ready! (wait to download it)')
         st.info('Memory is limited in the streamlit, so we only generate the first 7 seconds of your video!')
         file_ = open("test.gif", "rb")
         contents = file_.read()
@@ -145,6 +145,7 @@ def pipeline(model, image, video, color):
             unsafe_allow_html=True,
         )
         gif_file = open('test.gif')
+        now_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         st.download_button(
             label="Click here to download",
             data=gif_file,
@@ -169,6 +170,7 @@ about = """
 Apply different hair/lipstick color!
 
 hair:  available
+
 lipstick: as soon as possible
 """
 st.markdown(about, unsafe_allow_html=True)
@@ -222,6 +224,6 @@ if pressed:
 #  else:
 #    model = load_model(LIP_MODEL_PATH)
   model = load_model(HAIR_MODEL_PATH)
-  st.info('Model loaded!')
+  st.info('Model loaded!, please wait!')
   pipeline(model, image, video, COLOR)
   st.balloons()
