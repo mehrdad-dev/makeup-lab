@@ -113,7 +113,7 @@ def pipeline(model, image, video, color):
     else:
         results_frames = []
         while video.isOpened():
-            if len(results_frames) >=60:
+            if len(results_frames) >=125:
                 break
             ret, frame = video.read()
             if not ret:
@@ -150,6 +150,9 @@ st.markdown(
 
 about = """
 Apply different hair/lipstick color!
+
+hair:  available
+lipstick: as soon as possible
 """
 st.markdown(about, unsafe_allow_html=True)
 
