@@ -113,7 +113,7 @@ def pipeline(model, image, video, color):
     else:
         results_frames = []
         while video.isOpened():
-            if len(results_frames) >=125:
+            if len(results_frames) >=75:
                 break
             ret, frame = video.read()
             if not ret:
@@ -126,7 +126,7 @@ def pipeline(model, image, video, color):
         clip = ImageSequenceClip(list(results_frames), fps=25)
         clip.write_gif('test.gif', fps=25)     
         st.info('It is ready! (wait to download it)')
-        st.info('Memory is limited in the streamlit, so we only generate the first 5 seconds of your video!')
+        st.info('Memory is limited in the streamlit, so we only generate the first 3 seconds of your video!')
         file_ = open("test.gif", "rb")
         contents = file_.read()
         data_url = base64.b64encode(contents).decode("utf-8")
