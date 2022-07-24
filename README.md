@@ -1,5 +1,5 @@
 # Makeup Lab 🧑‍🔬💄
-About Apply different hair/lipstick color! (WebApp)
+Apply different hair/lipstick color! (WebApp)
 
 
 # Website
