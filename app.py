@@ -150,7 +150,7 @@ def pipeline(model, image, video, color):
             label="Click here to download",
             data=gif_file,
             file_name=f'makeup_lab_{now_time}.gif',
-            mime='image/gif',
+            mime='video/gif',
          )
         gif_file.close()
         
