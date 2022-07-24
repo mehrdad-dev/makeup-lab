@@ -9,6 +9,7 @@ import os
 from skimage.transform import resize, rescale
 from moviepy.editor import ImageSequenceClip
 import base64
+from datetime import datetime
 
 # ================================================================================================
 
@@ -110,10 +111,17 @@ def pipeline(model, image, video, color):
         image_result = transfer(color, alpha=1.0)
         st.info('Your makeup is ready!')
         st.image(image_result, channels="RGB", caption='Your uploaded image')
+        now_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        st.download_button(
+             label="Click here to download",
+             data=image_result,
+             file_name=f'makeup_lab_{now_time}.jpg',
+             mime='image/jpg',
+         )        
     else:
         results_frames = []
         while video.isOpened():
-            if len(results_frames) >=125:
+            if len(results_frames) >=175:
                 break
             ret, frame = video.read()
             if not ret:
@@ -125,7 +133,8 @@ def pipeline(model, image, video, color):
 
         clip = ImageSequenceClip(list(results_frames), fps=25)
         clip.write_gif('test.gif', fps=25)     
-        st.info('Video is ready! (wait to download it)')      
+        st.info('Video is ready! (wait to download it)')
+        st.info('Memory is limited in the streamlit, so we only generate the first 7 seconds of your video!')
         file_ = open("test.gif", "rb")
         contents = file_.read()
         data_url = base64.b64encode(contents).decode("utf-8")
@@ -135,6 +144,14 @@ def pipeline(model, image, video, color):
             f'<img src="data:image/gif;base64,{data_url}" alt="gif">',
             unsafe_allow_html=True,
         )
+        gif_file = open('test.gif')
+        st.download_button(
+            label="Click here to download",
+            data=gif_file,
+            file_name=f'makeup_lab_{now_time}.gif',
+            mime='image/gif',
+         )
+        gif_file.close()
         
         # writer = cv2.VideoWriter('001.avi',-1, 25, (224,224))
         # # writer = cv2.VideoWriter('test1.avi', cv2.VideoWriter_fourcc(*'mp4'), 25, (224, 224), False)
