@@ -9,7 +9,6 @@ import os
 from skimage.transform import resize, rescale
 from moviepy.editor import ImageSequenceClip
 import base64
-from datetime import datetime
 
 # ================================================================================================
 
@@ -110,14 +109,7 @@ def pipeline(model, image, video, color):
         predict(image, model)
         image_result = transfer(color, alpha=1.0)
         st.info('Your makeup is ready!')
-        st.image(image_result, channels="RGB", caption='Your uploaded image')
-        now_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        st.download_button(
-             label="Click here to download",
-             data=image_result,
-             file_name=f'makeup_lab_{now_time}.jpg',
-             mime='image/jpg',
-         )        
+        st.image(image_result, channels="RGB", caption='Your uploaded image')      
     else:
         results_frames = []
         while video.isOpened():
@@ -143,17 +135,7 @@ def pipeline(model, image, video, color):
         st.markdown(
             f'<img src="data:image/gif;base64,{data_url}" alt="gif">',
             unsafe_allow_html=True,
-        )
-        gif_file = open('test.gif')
-        now_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        st.download_button(
-            label="Click here to download",
-            data=gif_file,
-            file_name=f'makeup_lab_{now_time}.gif',
-            mime='video/gif',
-         )
-        gif_file.close()
-        
+        )        
         # writer = cv2.VideoWriter('001.avi',-1, 25, (224,224))
         # # writer = cv2.VideoWriter('test1.avi', cv2.VideoWriter_fourcc(*'mp4'), 25, (224, 224), False)
         # for i in results_frames:
