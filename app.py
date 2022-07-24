@@ -112,8 +112,9 @@ def pipeline(model, image, video, color):
         st.image(image_result, channels="RGB", caption='Your uploaded image')
     else:
         results_frames = []
-        # stframe = st.empty()
         while video.isOpened():
+            if len(results_frames) >=60:
+                break
             ret, frame = video.read()
             if not ret:
                 st.info("End of video stream ...")
