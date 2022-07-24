@@ -1,0 +1,7 @@
+streamlit
+tensorflow
+pandas
+numpy
+matplotlib
+scikit-image
+moviepy
