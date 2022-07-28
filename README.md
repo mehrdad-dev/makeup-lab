@@ -22,7 +22,7 @@ This project will be updated later.
 
 # Results
 
-![](../assets/video_2022-07-28_22-40-42.mp4)
+<video src='https://github.com/mehrdad-dev/makeup-lab/blob/main/assets/video_2022-07-28_22-41-42.mp4?raw=true'/>
 
 
 # ⭐️ Give it a star!
