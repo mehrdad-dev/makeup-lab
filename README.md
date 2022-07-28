@@ -4,13 +4,17 @@ Apply different hair/lipstick color! (WebApp)
 This project will be updated later.
 
 - model version: 2
-- hair: available
-- lipstick: as soon as possible
 
 # Website
 
 [Click here](https://mehrdad-dev-makeup-lab-app-2r88a0.streamlitapp.com/)
 
+
+# Options:
+- image upload: available
+- video upload: available
+- hair: available
+- lipstick: as soon as possible
 
 # How it works?
 
