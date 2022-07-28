@@ -10,7 +10,7 @@ This project will be updated later.
 [Click here](https://mehrdad-dev-makeup-lab-app-2r88a0.streamlitapp.com/)
 
 
-# Options:
+# Options
 - image upload: available
 - video upload: available
 - hair: available
