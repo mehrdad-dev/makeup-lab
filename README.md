@@ -1,5 +1,5 @@
 # Makeup Lab 🧑‍🔬💄
-Apply different hair/lipstick color! (WebApp)
+Apply different hair/lipstick color, using deep learning (WebApp)
 
 This project will be updated later.
 
