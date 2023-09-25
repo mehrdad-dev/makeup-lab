@@ -95,7 +95,7 @@ def predict(img, model):
     plt.imsave('image.jpg', img)
 
 
-@st.experimental_singleton
+@st.cache_resource
 def load_model(model_path):
   model = unet.unet(224,224,1,3)
   model.load_weights(model_path)    
