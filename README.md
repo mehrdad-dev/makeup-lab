@@ -1,11 +1,16 @@
 # Makeup Lab 🧑‍🔬💄
-Apply different hair/lipstick color, using deep learning (WebApp)
+Hair/Lipstick Coloring Using Deep Learning (WebApp)
 
 This project will be updated later.
 
 - model version: 2
 
+
+**UPDATE:** Project is fixed for the latest version of the streamlit.
+
 # Website
+
+<video src="https://raw.githubusercontent.com/mehrdad-dev/makeup-lab/main/assets/Kooha-2023-09-25-13-06-30.mp4"></video>
 
 [Click here](https://mehrdad-dev-makeup-lab-app-2r88a0.streamlitapp.com/)
 
