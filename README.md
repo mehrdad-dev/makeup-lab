@@ -10,7 +10,7 @@ This project will be updated later.
 
 # Website
 
-<video src="https://raw.githubusercontent.com/mehrdad-dev/makeup-lab/main/assets/Kooha-2023-09-25-13-06-30.mp4"></video>
+<video src="https://github.com/mehrdad-dev/makeup-lab/assets/40211374/fdca08b1-3e16-493f-a11f-0d3b54a3b11c"> </video>
 
 [Click here](https://mehrdad-dev-makeup-lab-app-2r88a0.streamlitapp.com/)
 
@@ -18,6 +18,9 @@ This project will be updated later.
 # Options
 - image upload: available
 - video upload: available
+
+
+
 - hair: available
 - lipstick: as soon as possible
 
