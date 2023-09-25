@@ -10,7 +10,7 @@ This project will be updated later.
 
 # Website
 
-<video src="https://github.com/mehrdad-dev/makeup-lab/assets/40211374/fdca08b1-3e16-493f-a11f-0d3b54a3b11c"> </video>
+https://github.com/mehrdad-dev/makeup-lab/assets/40211374/fdca08b1-3e16-493f-a11f-0d3b54a3b11c
 
 [Click here](https://mehrdad-dev-makeup-lab-app-2r88a0.streamlitapp.com/)
 
