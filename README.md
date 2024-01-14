@@ -60,6 +60,7 @@ https://user-images.githubusercontent.com/40211374/181614945-432d531d-db85-44a6-
 
 
 # ⭐️ Give it a star!
+[![Star History Chart](https://api.star-history.com/svg?repos=mehrdad-dev/makeup-lab&type=Date)](https://star-history.com/#mehrdad-dev/makeup-lab&Date)
 
 
 # Contact
